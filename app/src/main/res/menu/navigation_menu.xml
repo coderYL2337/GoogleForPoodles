@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+tools:ignore="HardcodedText">
+
+<item
+    android:id="@+id/nav_logo"
+    android:title="Poogle" />
+
+<item
+    android:id="@+id/nav_home"
+    android:title="Home" />
+
+<item
+    android:id="@+id/nav_saved"
+    android:title="Saved" />
+
+<item
+    android:id="@+id/nav_search_settings"
+    android:title="Search settings" />
+
+<item
+    android:id="@+id/nav_Your_data_in_Search"
+    android:title="Your data in Search" />
+
+<item
+    android:id="@+id/nav_SafeSearch"
+    android:title="SafeSearch" />
+
+<item
+    android:id="@+id/nav_dark_theme_off"
+    android:title="Dark theme off" />
+
+<item
+    android:id="@+id/nav_how_seardh_works"
+    android:title="How Search works" />
+
+<item
+    android:id="@+id/nav_help"
+    android:title="Help" />
+
+<item
+    android:id="@+id/nva_send_feedback"
+    android:title="Send Feedback" />
+
+</menu>
+

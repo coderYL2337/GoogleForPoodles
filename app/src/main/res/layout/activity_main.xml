@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- the root view is the DrawerLayout -->
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <!--Poogle text-->
+        <TextView
+            android:id="@+id/poogleLogoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poogle"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/allText"
+            app:layout_constraintVertical_bias="0.4" />
+
+
+        <!-- Poodle Image below the Poogle text -->
+        <ImageView
+            android:id="@+id/poodle_image"
+            android:layout_width="278dp"
+            android:layout_height="148dp"
+            app:layout_constraintTop_toBottomOf="@+id/poogleLogoText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/poogle_logo" />
+
+        <!-- Search bar below the image -->
+        <SearchView
+            android:id="@+id/poogle_searchbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/search_background"
+            android:queryHint="Search..."
+            android:iconifiedByDefault="false"
+            app:layout_constraintTop_toBottomOf="@id/poodle_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <!-- All and Images texts at the top -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <TextView
+            android:id="@+id/allText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:textSize="12sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/imagesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Images"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            app:layout_constraintStart_toEndOf="@+id/allText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Icons at the top right -->
+        <ImageButton
+            android:id="@+id/widgetbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="47dp"
+            android:layout_height="39dp"
+            app:layout_constraintEnd_toStartOf="@id/widgetbutton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_gallery"  />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--  NavigationView -->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+
+
+
+
+
+
+
